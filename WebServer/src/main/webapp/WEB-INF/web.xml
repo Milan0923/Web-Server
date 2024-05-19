@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>WebServer</display-name>
+  <welcome-file-list>
+    <welcome-file>signup.jsp</welcome-file>
+  </welcome-file-list>
+    <context-param>
+  <param-name>dbdriver</param-name>
+  <param-value>oracle.jdbc.driver.OracleDriver</param-value>
+  </context-param>
+   <context-param>
+  <param-name>dburl</param-name>
+  <param-value>jdbc:oracle:thin:@LAPTOP-K620RIUF:1521:XE</param-value>
+  </context-param>
+   <context-param>
+  <param-name>dbuser</param-name>
+  <param-value>hr</param-value>
+  </context-param>
+   <context-param>
+  <param-name>dbpass</param-name>
+  <param-value>hr</param-value>
+  </context-param>
+  
+  <servlet>
+    <description></description>
+    <display-name>Login</display-name>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>com.page.Login</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Signup</display-name>
+    <servlet-name>Signup</servlet-name>
+    <servlet-class>com.page.Signup</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Signup</servlet-name>
+    <url-pattern>/Signup</url-pattern>
+  </servlet-mapping>
+</web-app>
